@@ -1,0 +1,35 @@
+.AppNameContainer {
+  position: relative;
+  left: 50%;
+}
+
+.ButtonContainer {
+  position: relative;
+  left: 50%;
+}
+
+.Button {
+  background: grey(96,9,240);
+  background: linear-gradient(0deg, grey(96,9,240,1) 0%, light-grey(129,5,240,1) 100%);
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 20px;
+  font: 1em sans-serif;
+  margin-left :5px;
+  border-radius: 15%;
+}
+
+.Button:before {
+  height: 10%;
+  width: 2px;
+}
+
+.Button:hover {
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
