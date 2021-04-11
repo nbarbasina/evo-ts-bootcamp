@@ -1,3 +1,13 @@
+.Div {
+  position: relative;
+  left: 50%;
+}
+
+.Bar {
+  position: relative;
+  left: 40%;
+}
+
 .AppNameContainer {
   position: relative;
   left: 50%;
