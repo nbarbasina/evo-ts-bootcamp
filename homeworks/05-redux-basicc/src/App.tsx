@@ -14,32 +14,32 @@ export type BalanceAction = {
   payload: number,
 }
 
-export const UPDATE_BALANCE = 'updateBalance';
-export const CREDIT = 'credit';
-export const SUBTRACT_PERCENTAGE = 'subtractPercentage';
-export const DEBIT = 'debit';
+export const UPDATE_BALANCE = 'UPDATE_BALANCE';
+export const CREDIT = 'CREDIT';
+export const SUBTRACT_PERCENTAGE = 'SET_BALANCE_WITH_TAX';
+export const DEBIT = 'DEBIT';
 
 const balanceReducer = (balance: number = 100, action: BalanceAction) => {
   const { type, payload } = action;
 
   if (type === UPDATE_BALANCE) {
     const newbalance = payload;
-    return newbalance;
+    return +newbalance.toFixed(2);
   }
 
   if (type === CREDIT) {
     const newbalance = balance - payload;
-    return newbalance;
+    return +newbalance.toFixed(2);
   }
 
   if (type === SUBTRACT_PERCENTAGE) {
     const newbalance = balance - ((balance / 100) * payload);
-    return newbalance;
+    return +newbalance.toFixed(2);
   }
 
   if (type === DEBIT) {
     const newbalance = balance + payload;
-    return newbalance;
+    return +newbalance.toFixed(2);
   }
 
   return balance;
